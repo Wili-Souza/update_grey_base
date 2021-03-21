@@ -35,6 +35,7 @@ def agileAlliance_scraper():
 
     # --------------- Conectando com o Selenium
     chromeOptions = webdriver.ChromeOptions()
+    chromeOptions.binary_location = GOOGLE_CHROME_BIN
     chromeOptions.add_argument("--headless")
     chromeOptions.add_argument('--disable-gpu')
     chromeOptions.add_argument("--no-sandbox")
@@ -42,7 +43,7 @@ def agileAlliance_scraper():
     chromeOptions.add_argument("--window-size=1920x1080")
     chromeOptions.add_argument("start-maximised")
 
-    driver = webdriver.Chrome('chromedriver.exe', options=chromeOptions)
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=chromeOptions)
 
     #Conectando com a página usando o driver
     driver.get('https://www.agilealliance.org/resources')
