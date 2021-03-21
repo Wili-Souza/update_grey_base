@@ -4,3 +4,7 @@ include/
 Lib/
 Scripts/
 pyvenv.cfg
+*.xlsx
+*.csv
+.env
+.vscode
