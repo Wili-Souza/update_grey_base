@@ -5,6 +5,7 @@ import pandas as pd
 from time import sleep
 from datetime import datetime
 from server.connection import db
+from decouple import config
 
 from AA_scraper_mod.postType import findType
 from pymongo import MongoClient
